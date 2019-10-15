@@ -22,6 +22,7 @@
 * [Twitter scraper tutorial with Python: Requests, BeautifulSoup, and Selenium — Part 2 - Daw-Ran Liou - Apr 9, 2016 · 3 min](https://medium.com/@dawranliou/twitter-scraper-tutorial-with-python-requests-beautifulsoup-and-selenium-part-2-b38d849b07fe)
 * [What is the difference between 'content' and 'text'](https://stackoverflow.com/questions/17011357/what-is-the-difference-between-content-and-text)
     > > `r.text` is the content of the response in Unicode, and `r.content` is the content of the response in bytes.
+* [Make Your Python Web Scraper Smarter - Hannah Huang - Jun 19 · 6 min read](https://levelup.gitconnected.com/make-your-python-web-scraper-smarter-6233f2d10c3f) - How to deal with multiple pages.
 
 ### Scraping HTML tables with Pandas
 * [Web Scraping with Pandas and Beautifulsoup](https://pythonprogramminglanguage.com/web-scraping-with-pandas-and-beautifulsoup/) - Especially useful for purposes of assignment.
@@ -40,3 +41,28 @@
 ## Challenges and Questions
 * `lxml` library does not do https?
 * When to use Splinter quit browser `browser.quit()`?
+
+## Urllib.parse
+* https://docs.python.org/3/library/urllib.parse.html
+
+## TABLE
+<table border="1" class="dataframe">  <tbody>    <tr>      <td>Equatorial Diameter:</td>      <td>6,792 km</td>    </tr>    <tr>      <td>Polar Diameter:</td>      <td>6,752 km</td>    </tr>    <tr>      <td>Mass:</td>      <td>6.39 × 10^23 kg (0.11 Earths)</td>    </tr>    <tr>      <td>Moons:</td>      <td>2 (Phobos &amp; Deimos)</td>    </tr>    <tr>      <td>Orbit Distance:</td>      <td>227,943,824 km (1.38 AU)</td>    </tr>    <tr>      <td>Orbit Period:</td>      <td>687 days (1.9 years)</td>    </tr>    <tr>      <td>Surface Temperature:</td>      <td>-87 to -5 °C</td>    </tr>    <tr>      <td>First Record:</td>      <td>2nd millennium BC</td>    </tr>    <tr>      <td>Recorded By:</td>      <td>Egyptian astronomers</td>    </tr>  </tbody></table>
+
+
+<!-- soup.find_all("a")
+soup("a") -->
+<!-- 
+# manny code
+# scraping = True
+# data = []
+# while scraping==True:
+#     soup = BeautifulSoup(browser.html, "lxml")
+#     books = soup.find_all("article", class_="product_pod")
+#     for book in books:
+#         link = book.find("h3").find("a")["href"]
+#         title = book.find("h3").find("a")["title"]
+#         data.append({"link": link, "title": title})
+#     try:
+#         browser.click_link_by_partial_text('next')
+#     except:
+#         scraping = False -->
