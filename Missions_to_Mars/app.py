@@ -1,38 +1,41 @@
+# Jadd Cheng
+# October 15, 2019
 # See activity 7.
+# See craigslist example.
+# jinja doesn't like HTML comments!
 
+# Import dependencies.
 from flask import Flask, render_template, redirect
 from flask_pymongo import PyMongo
+import scrape_mars
 
-# redirect --> website that doesn't exist.
-scrape
-index.html
-
+# Create Flask instance.
 app = Flask(__name__)
 
-mongodb://localhost:27017
-app.py --> center of universe for Flask
-
-# when you incorporate HTML CSS and JS
-
+# NB mars_app --> db name. flaskpymongo --> looks for this. need to add db you want to connect to.
 app.config["MONGO_URI"] = "mongodb://localhost:27017/mars_app"
 mongo = PyMongo(app)
+# app.config is a dict object.
 
-# mongo used to interact with db. --> mongo.db. --> db understood from URI. 
-# collections.
-# NB --> mars_app. create if not exist?
-
-flaskpymongo --> looks for this.
-need to add db you want to connect to.
-
+# home page
 @app.route("/")
 def index():
-    return render_template("index.html", ...)
+    mars = mongo.db.mars.find_one()
+    return render_template("index.html", mars=mars)
 
-@app.route("scrape")
-def scrape()
+@app.route("/scrape")
+def scrape():
+    # run scrape function and save the results. should return dict.
+    mars = mongo.db.mars
 
-    # run scrape function and save the results.
+    # Run scrape method of scrape_mars function. Save to var.
     mars_data = scrape_mars.scrape()
+    
+    # Update mongo database. what is field you're matching against.'
+    mongo.db.mars.update({}, mars_data, upsert=True)
+
+    # After scrape return to homepage.
+    return redirect("/")
 
 if __name__ == "__main__":
-    print(xxx)
+    app.run(debug=True)

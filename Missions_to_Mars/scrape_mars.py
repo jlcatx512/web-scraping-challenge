@@ -1,3 +1,5 @@
+# Jadd Cheng
+# October 15, 2019
 # Import dependencies
 import pandas as pd # to extract HTML table.
 from bs4 import BeautifulSoup as bs # bs --> parse and extract data
@@ -127,7 +129,6 @@ def scrape():
     browser.quit()
 
     return mars_data
-    return redirect("/")
 
 if __name__ == "__main__":
     # scrape()

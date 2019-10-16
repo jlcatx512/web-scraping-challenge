@@ -1,9 +1,3 @@
-<!-- # Bootstrap  -->
-
-
-how many boxes?
-buttons
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,20 +13,47 @@ buttons
   <div class="container">
 
     <div class="jumbotron text-center">
-      <h1>Hot Finds On Craigslist</h1>
-      <p><a class="btn btn-primary btn-lg" href="/scrape_mars" role="button">MARS!</a></p>
+      <h1>Mission to Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">GET MARS DATA!</a></p>
     </div>
 
-    <!-- Craigslist Listings -->
-    <div class="row" id="craiglist-listings">
+    <!-- Mars News -->
+    <div class="row" id="mars-news">
       <div class="col-md-12">
-        <h4 class="heading">{{listings.price}} {{listings.headline}}</h4>
-        <small>{{listings.hood}}</small>
-      </div>
+        <h4 class="heading">{{mars.news_title}}</h4>
+        <small>{{mars.news_p}}</small>
+      </div> <!-- end col -->
+    </div> <!-- end row -->
+ 
+    <hr>
+
+    <!-- Mars Weather -->
+    <div class="row" id="mars-weather">
+        <div class="col-md-12">
+            <h4>Mars Weather</h4>
+            <small>{{mars.mars_weather}}</small>
+        </div>
     </div>
-
-  </div>
+    <hr>
+    
+    <!-- Mars Image -->
+    <div class="row" id="mars-image">
+        <div class="col-md-12">
+            <h4>Mars Featured Image of the Day</h4>
+            <a class="thumbnail" href="{{mars.featured_image_url}}" target="_blank"><img src="{{mars.featured_image_url}}" alt="Mars Featured Image of the Day"></a>
+        </div> <!-- end div col -->
+    </div> <!-- end div row -->
+    <hr>
+    <!-- Mars Facts Table -->
+    <div class="row">
+        <div class="col-md-12 text-center d-flex justify-content-center">
+            <h4>Mars Facts</h4>
+            <div class="d-flex justify-content-center">
+                {{mars.facts_html_table|safe}}
+            </div>
+            <br>
+        </div> <!-- end div class col -->
+    </div> <!-- end div row -->
+  </div> <!-- end div container -->
 </body>
-
 </html>
-
