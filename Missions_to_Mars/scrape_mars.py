@@ -1,5 +1,6 @@
 # Jadd Cheng
 # October 15, 2019
+
 # Import dependencies
 import pandas as pd # to extract HTML table.
 from bs4 import BeautifulSoup as bs # bs --> parse and extract data
@@ -8,16 +9,18 @@ import requests
 from urllib.parse import urlparse
 import time # for sleep statement
 
+# Initialize browser object.
 def init_browser():
     executable_path = {"executable_path": "chromedriver.exe"}
     return Browser("chrome", **executable_path, headless=False)
 
+# Define scrape function.
 def scrape():
 
-    # initialize browser instance.
+    # Initialize browser instance.
     browser = init_browser()
 
-    # dict to hold extracted data.
+    # Create dictionary to hold extracted data.
     mars_data = {}
 
 ## 1. NASA Mars News - Scrape the NASA Mars News Site and collect the latest News Title and Paragraph Text. Assign the text to variables that you can reference later.
@@ -119,7 +122,8 @@ def scrape():
         browser.visit(link)
         time.sleep(1)
         link_soup = bs(browser.html, 'lxml')
-        title = link_soup.h2.text.replace(" Enhanced", "")
+        # title = link_soup.h2.text.replace(" Enhanced", "")
+        title = link_soup.h2.text
         img_url =  link_soup.find('div', class_="downloads").find('li').a['href']    
         hemisphere_image_urls.append({"title": title, "img_url": img_url})
 
