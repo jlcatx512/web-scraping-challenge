@@ -53,6 +53,7 @@
 >> Bootstrap cards component provide a flexible and extensible container for displaying content. Bootstrap cards are delivered with a bunch of variants and options.
 * [Bootstrap documentation - Cards](https://getbootstrap.com/docs/4.3/components/card/)
 >> Bootstrap’s cards provide a flexible and extensible content container with multiple variants and options.
+* [How the Bootstrap 4 Grid Works - Understanding the Flexbox Powered Bootstrap 4 Grid](https://uxplanet.org/how-the-bootstrap-4-grid-works-a1b04703a3b7)
 
 ## Jinja
 * [Jinja Templates](http://jinja.palletsprojects.com/en/2.10.x/templates/)
@@ -65,6 +66,7 @@
 >>>> <div class="info">
 >>>>>> {{data.email_content|safe}}
 >>>> </div>
+* [List of dictionaries in jinja](https://stackoverflow.com/questions/38765097/list-of-dictionaries-in-jinja?rq=1)
 
 ## TABLE
 <table border="1" class="dataframe">  <tbody>    <tr>      <td>Equatorial Diameter:</td>      <td>6,792 km</td>    </tr>    <tr>      <td>Polar Diameter:</td>      <td>6,752 km</td>    </tr>    <tr>      <td>Mass:</td>      <td>6.39 × 10^23 kg (0.11 Earths)</td>    </tr>    <tr>      <td>Moons:</td>      <td>2 (Phobos &amp; Deimos)</td>    </tr>    <tr>      <td>Orbit Distance:</td>      <td>227,943,824 km (1.38 AU)</td>    </tr>    <tr>      <td>Orbit Period:</td>      <td>687 days (1.9 years)</td>    </tr>    <tr>      <td>Surface Temperature:</td>      <td>-87 to -5 °C</td>    </tr>    <tr>      <td>First Record:</td>      <td>2nd millennium BC</td>    </tr>    <tr>      <td>Recorded By:</td>      <td>Egyptian astronomers</td>    </tr>  </tbody></table>

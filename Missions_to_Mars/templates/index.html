@@ -52,41 +52,17 @@
     <!-- Mars Hemispheres -->
     <h2>Mars Hemispheres</h2>
     <hr>
-    <div class="row" id="mars-hemispheres">
-            <!-- 1 -->
-
-            <div class="col-sm-6">
-                <a class="thumbnail" href="{{mars.featured_image_url}}">
-                    <img class="img-thumbnail img-fluid w-50" src="{{mars.featured_image_url}}" alt="">
+    <div class="row pb-3">
+        {% for list_item in mars.hemisphere_image_urls %}
+        <div class="col-sm-6 mx-auto">
+                <a class="thumbnail" href="{{list_item['img_url']}}" target="_blank">
+                    <img class="img-thumbnail img-fluid w-50" src="{{list_item['img_url']}}" alt="{{list_item['title']}}">
                 </a>
-                <h3 class="card-title">{{mars.news_title}}</h3>
-            </div><!-- col  -->
-            
-            <!-- 2 -->
-            <div class="col-sm-6">
-                <a class="thumbnail" href="{{mars.featured_image_url}}">
-                    <img class="img-thumbnail img-fluid" src="{{mars.featured_image_url}}" alt="">
-                </a>
-                <h3 class="card-title">{{mars.news_title}}</h3>
-            </div><!-- col  -->
-            
-            <!-- 3 -->
-            <div class="col-sm-6">
-                <a class="thumbnail" href="{{mars.featured_image_url}}">
-                    <img class="img-thumbnail img-fluid" src="{{mars.featured_image_url}}" alt="">
-                </a>
-                <h3 class="card-title">{{mars.news_title}}</h3>
-            </div><!-- col  -->
-            
-            <!-- 4 -->
-            <div class="col-sm-6">
-                <a class="thumbnail" href="{{mars.featured_image_url}}">
-                    <img class="img-thumbnail img-fluid" src="{{mars.featured_image_url}}" alt="">
-                </a>
-                <h3 class="card-title">{{mars.news_title}}</h3>
-            </div><!-- col  -->
-        </div><!-- row -->
-
+                <h3 class="ml-3">{{list_item['title']}}</h3>
+        </div><!-- col  -->
+        {% endfor %}
+    </div><!-- end row -->
+    <hr>
   </div> <!-- end div main container -->
 </body>
 </html>
