@@ -48,6 +48,12 @@
 ## Urllib.parse
 * https://docs.python.org/3/library/urllib.parse.html
 
+## Bootstrap
+* [Bootstrap cards](https://coreui.io/docs/components/cards/)
+>> Bootstrap cards component provide a flexible and extensible container for displaying content. Bootstrap cards are delivered with a bunch of variants and options.
+* [Bootstrap documentation - Cards](https://getbootstrap.com/docs/4.3/components/card/)
+>> Bootstrap’s cards provide a flexible and extensible content container with multiple variants and options.
+
 ## Jinja
 * [Jinja Templates](http://jinja.palletsprojects.com/en/2.10.x/templates/)
 * NB Jinja doesn't play nice with HTML comments.
