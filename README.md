@@ -38,12 +38,18 @@
 * [Python: Need to wait before BeautifulSoup and Urllib can parse a website - Stack Overflow](https://stackoverflow.com/questions/21445845/python-need-to-wait-before-beautifulsoup-and-urllib-can-parse-a-website)
 * [Tutorial: Web Scraping and BeautifulSoup - Dataquest.io](https://www.dataquest.io/blog/web-scraping-beautifulsoup/)
 
+## Flask-Pymongo 
+* [Flask-PyMongo](https://flask-pymongo.readthedocs.io/en/latest/)
+
 ## Challenges and Questions
 * `lxml` library does not do https?
 * When to use Splinter quit browser `browser.quit()`?
 
 ## Urllib.parse
 * https://docs.python.org/3/library/urllib.parse.html
+
+## Jinja
+* [Jinja Templates](http://jinja.palletsprojects.com/en/2.10.x/templates/)
 
 ## TABLE
 <table border="1" class="dataframe">  <tbody>    <tr>      <td>Equatorial Diameter:</td>      <td>6,792 km</td>    </tr>    <tr>      <td>Polar Diameter:</td>      <td>6,752 km</td>    </tr>    <tr>      <td>Mass:</td>      <td>6.39 × 10^23 kg (0.11 Earths)</td>    </tr>    <tr>      <td>Moons:</td>      <td>2 (Phobos &amp; Deimos)</td>    </tr>    <tr>      <td>Orbit Distance:</td>      <td>227,943,824 km (1.38 AU)</td>    </tr>    <tr>      <td>Orbit Period:</td>      <td>687 days (1.9 years)</td>    </tr>    <tr>      <td>Surface Temperature:</td>      <td>-87 to -5 °C</td>    </tr>    <tr>      <td>First Record:</td>      <td>2nd millennium BC</td>    </tr>    <tr>      <td>Recorded By:</td>      <td>Egyptian astronomers</td>    </tr>  </tbody></table>
@@ -66,3 +72,9 @@ soup("a") -->
 #         browser.click_link_by_partial_text('next')
 #     except:
 #         scraping = False -->
+
+
+<table border="1" class="dataframe">\n  <tbody>\n    <tr>\n      <td>Equatorial Diameter:</td>\n      <td>6,792 km</td>\n    </tr>\n    <tr>\n      <td>Polar Diameter:</td>\n      <td>6,752 km</td>\n    </tr>\n    <tr>\n      <td>Mass:</td>\n      <td>6.39 × 10^23 kg (0.11 Earths)</td>\n    </tr>\n    <tr>\n      <td>Moons:</td>\n      <td>2 (Phobos &amp; Deimos)</td>\n    </tr>\n    <tr>\n      <td>Orbit Distance:</td>\n      <td>227,943,824 km (1.38 AU)</td>\n    </tr>\n    <tr>\n      <td>Orbit Period:</td>\n      <td>687 days (1.9 years)</td>\n    </tr>\n    <tr>\n      <td>Surface Temperature:</td>\n      <td>-87 to -5 °C</td>\n    </tr>\n    <tr>\n      <td>First Record:</td>\n      <td>2nd millennium BC</td>\n    </tr>\n    <tr>\n      <td>Recorded By:</td>\n      <td>Egyptian astronomers</td>\n    </tr>\n  </tbody>\n</table>'
+
+
+<table border="1" class="dataframe">  <tbody>    <tr>      <td>Equatorial Diameter:</td>      <td>6,792 km</td>    </tr>    <tr>      <td>Polar Diameter:</td>      <td>6,752 km</td>    </tr>    <tr>      <td>Mass:</td>      <td>6.39 × 10^23 kg (0.11 Earths)</td>    </tr>    <tr>      <td>Moons:</td>      <td>2 (Phobos &amp; Deimos)</td>    </tr>    <tr>      <td>Orbit Distance:</td>      <td>227,943,824 km (1.38 AU)</td>    </tr>    <tr>      <td>Orbit Period:</td>      <td>687 days (1.9 years)</td>    </tr>    <tr>      <td>Surface Temperature:</td>      <td>-87 to -5 °C</td>    </tr>    <tr>      <td>First Record:</td>      <td>2nd millennium BC</td>    </tr>    <tr>      <td>Recorded By:</td>      <td>Egyptian astronomers</td>    </tr>  </tbody></table>
